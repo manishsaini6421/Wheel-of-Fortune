@@ -1,4 +1,4 @@
-# PASTE YOUR WOFPlayer CLASS (from part A) HERE
+
 class WOFPlayer:
     def __init__(self,name):
         self.name=name
@@ -13,12 +13,12 @@ class WOFPlayer:
         
     def __str__(self):
         return "{} (${})".format(self.name,self.prizeMoney)
-# PASTE YOUR WOFHumanPlayer CLASS (from part B) HERE
+
 class WOFHumanPlayer(WOFPlayer):
     def getMove(self,category, obscuredPhrase, guessed):
         x=input("{} has ${}\n\nCategory: {}\nPhrase:  {}\nGuessed: {}\n\nGuess a letter, phrase, or type 'exit' or 'pass':".format(self.name,self.prizeMoney,category,obscuredPhrase,guessed))
         return x
-# PASTE YOUR WOFComputerPlayer CLASS (from part C) HERE
+
 class WOFComputerPlayer(WOFPlayer):
     SORTED_FREQUENCIES='ZQXJKVBPYGFWMUCLDRHSNIOATE'
     def __init__(self,name,difficulty):
